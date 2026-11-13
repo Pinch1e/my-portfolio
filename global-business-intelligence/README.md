@@ -7,12 +7,14 @@ and evaluate business opportunities across countries and continents.
 ## Data source
 World Bank Entrepreneurship Database 2025.
 
-## Initial datasets
+
+## Database Architecture
+The Global Business Intelligence (GBI) project uses three datasets from the World Bank Entrepreneurship Database 2025:
 - New LLC registrations
 - Closed LLC registrations
 - Total LLC registrations
 
-Entity Relationship Diagram (ERD)
+### Entity Relationship Diagram (ERD)
 
 The diagram below represents the initial PostgreSQL database structure.
 
@@ -41,8 +43,10 @@ erDiagram
         REAL total_density_rate
         REAL adult_population
     }
+```
 
-Note: Economy and year are the candidate composite keys for each dataset. Relationships between the tables have not yet been formally defined.
+**Note:** Economy and year are candidate composite keys for each dataset. Relationships between the tables have not yet been formally defined.
+
 
 ## Technology
 - PostgreSQL
