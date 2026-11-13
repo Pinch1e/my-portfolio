@@ -12,6 +12,37 @@ World Bank Entrepreneurship Database 2025.
 - Closed LLC registrations
 - Total LLC registrations
 
+Entity Relationship Diagram (ERD)
+
+The diagram below represents the initial PostgreSQL database structure.
+
+erDiagram
+    NEW_LLCS {
+        TEXT economy
+        INTEGER year
+        REAL new_llcs
+        REAL new_business_density_rate
+        REAL adult_population
+    }
+
+    CLOSED_LLCS {
+        TEXT economy
+        INTEGER year
+        REAL closed_llcs
+        REAL closed_business_density_rate
+        REAL adult_population
+    }
+
+    TOTAL_LLCS {
+        TEXT economy
+        INTEGER year
+        REAL total_llcs
+        REAL total_density_rate
+        REAL adult_population
+    }
+
+Note: Economy and year are the candidate composite keys for each dataset. Relationships between the tables have not yet been formally defined.
+
 ## Technology
 - PostgreSQL
 - DBeaver
