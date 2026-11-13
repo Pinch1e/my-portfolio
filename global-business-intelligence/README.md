@@ -16,6 +16,7 @@ Entity Relationship Diagram (ERD)
 
 The diagram below represents the initial PostgreSQL database structure.
 
+```mermaid
 erDiagram
     NEW_LLCS {
         TEXT economy
