@@ -51,7 +51,7 @@ erDiagram
 ## Technology
 - PostgreSQL
 - DBeaver
-- SQL
+- SQLgit 
 - Python
 - pandas
 
