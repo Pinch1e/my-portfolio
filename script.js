@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  if (!document.querySelector(".background-shark")) {
+    const shark = document.createElement("div");
+    shark.className = "background-shark";
+    shark.setAttribute("aria-hidden", "true");
+    document.body.append(shark);
+  }
+
   const nav = document.querySelector(".nav-links");
   const menuButton = document.querySelector(".menu-toggle");
 
@@ -40,27 +47,3 @@ document.addEventListener("DOMContentLoaded", () => {
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
 });
-
-(() => {
-  const storageKey = "emmanuel-portfolio-theme";
-  const getTheme = () => {
-    try { return localStorage.getItem(storageKey) || "dark"; }
-    catch (_) { return "dark"; }
-  };
-  const applyTheme = (theme) => {
-    document.body.classList.toggle("light-theme", theme === "light");
-    document.querySelectorAll(".theme-toggle").forEach((button) => {
-      const label = button.querySelector(".theme-label");
-      if (label) label.textContent = theme === "light" ? "Dark mode" : "Light mode";
-      button.setAttribute("aria-label", theme === "light" ? "Switch to dark theme" : "Switch to light theme");
-      button.title = theme === "light" ? "Switch to dark theme" : "Switch to light theme";
-    });
-  };
-  applyTheme(getTheme());
-  document.addEventListener("click", (event) => {
-    if (!event.target.closest(".theme-toggle")) return;
-    const nextTheme = document.body.classList.contains("light-theme") ? "dark" : "light";
-    applyTheme(nextTheme);
-    try { localStorage.setItem(storageKey, nextTheme); } catch (_) {}
-  });
-})();
