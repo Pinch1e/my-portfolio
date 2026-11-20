@@ -226,6 +226,7 @@ h2 em {
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: translateZ(-8%);
 }
 
 #globeViz {
