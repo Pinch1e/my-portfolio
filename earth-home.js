@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector(".navigation");
     const menuButton = document.querySelector(".menu-toggle");
@@ -96,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     globe.pointOfView(
-        { lat: 25, lng: 15, altitude: 2.15 },
+        { lat: 25, lng: 15, altitude: 2.5 },
         0
     );
 
